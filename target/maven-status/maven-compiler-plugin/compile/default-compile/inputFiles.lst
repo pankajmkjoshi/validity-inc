@@ -1,0 +1,14 @@
+C:\my-work\validate-data-set-app-spring-boot\src\main\java\com\validity\fuzzylogic\converter\IDataConverter.java
+C:\my-work\validate-data-set-app-spring-boot\src\main\java\com\validity\fuzzylogic\converter\LogicModelToBeanConverter.java
+C:\my-work\validate-data-set-app-spring-boot\src\main\java\com\validity\fuzzylogic\model\Person.java
+C:\my-work\validate-data-set-app-spring-boot\src\main\java\com\validity\fuzzylogic\ValidityApp.java
+C:\my-work\validate-data-set-app-spring-boot\src\main\java\com\validity\fuzzylogic\controller\LogicController.java
+C:\my-work\validate-data-set-app-spring-boot\src\main\java\com\validity\fuzzylogic\bean\PersonBean.java
+C:\my-work\validate-data-set-app-spring-boot\src\main\java\com\validity\fuzzylogic\DataParserUtils.java
+C:\my-work\validate-data-set-app-spring-boot\src\main\java\com\validity\fuzzylogic\service\LogicServiceImpl.java
+C:\my-work\validate-data-set-app-spring-boot\src\main\java\com\validity\fuzzylogic\exception\ApiExceptionHandler.java
+C:\my-work\validate-data-set-app-spring-boot\src\main\java\com\validity\fuzzylogic\service\LogicService.java
+C:\my-work\validate-data-set-app-spring-boot\src\main\java\com\validity\fuzzylogic\exception\CustomException.java
+C:\my-work\validate-data-set-app-spring-boot\src\main\java\com\validity\fuzzylogic\SwaggerConfig.java
+C:\my-work\validate-data-set-app-spring-boot\src\main\java\com\validity\fuzzylogic\bean\StatisticBean.java
+C:\my-work\validate-data-set-app-spring-boot\src\main\java\com\validity\fuzzylogic\converter\AbstractDataConverter.java

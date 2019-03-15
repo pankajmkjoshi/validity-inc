@@ -1,0 +1,14 @@
+com\validity\fuzzylogic\model\Person.class
+com\validity\fuzzylogic\service\LogicService.class
+com\validity\fuzzylogic\bean\StatisticBean.class
+com\validity\fuzzylogic\converter\AbstractDataConverter.class
+com\validity\fuzzylogic\SwaggerConfig.class
+com\validity\fuzzylogic\converter\LogicModelToBeanConverter.class
+com\validity\fuzzylogic\exception\ApiExceptionHandler.class
+com\validity\fuzzylogic\bean\PersonBean.class
+com\validity\fuzzylogic\controller\LogicController.class
+com\validity\fuzzylogic\converter\IDataConverter.class
+com\validity\fuzzylogic\ValidityApp.class
+com\validity\fuzzylogic\DataParserUtils.class
+com\validity\fuzzylogic\exception\CustomException.class
+com\validity\fuzzylogic\service\LogicServiceImpl.class
