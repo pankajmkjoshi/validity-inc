@@ -2,6 +2,7 @@ package com.validity.fuzzylogic.service;
 
 
 import com.validity.fuzzylogic.bean.StatisticBean;
+import org.springframework.stereotype.Service;
 
 /**
  * A logic service.

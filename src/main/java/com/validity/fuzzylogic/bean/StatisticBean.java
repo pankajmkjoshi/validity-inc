@@ -4,6 +4,9 @@ import lombok.Data;
 
 import java.util.List;
 
+/**
+ * Statistic bean behave as a wrapper and carries some other information as well.
+ */
 @Data
 public class StatisticBean {
     private Integer totalItems;

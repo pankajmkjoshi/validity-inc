@@ -22,23 +22,4 @@ public class Person {
     private String state;
     private String phone;
     private String phoneticScore;
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(phoneticScore);
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        Person person;
-        if (!(o instanceof Person)) {
-            return false;
-        } else {
-            person = (Person) o;
-            if (this.phoneticScore.equals(person.getPhoneticScore())) {
-                return true;
-            }
-        }
-        return false;
-    }
 }

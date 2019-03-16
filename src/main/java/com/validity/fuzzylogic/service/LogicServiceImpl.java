@@ -55,7 +55,7 @@ public class LogicServiceImpl implements LogicService {
             file = ResourceUtils.getFile(s);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            throw new CustomException("Some thing wrong happend with file..");
+            throw new CustomException("Some thing wrong happened with file.");
         }
         return file;
     }
@@ -68,17 +68,16 @@ public class LogicServiceImpl implements LogicService {
      */
     private StatisticBean getStatisticBean(final File file) {
         final List<Person> records = DataParserUtils.parseDataFile(file);
-        final List<Person> nonDuplicates = getNonDuplicatePeople(records);
-        final List<Person> duplicates = getDuplicatePeople(records);
+        final List<PersonBean> personBeansRecords = logicModelToBeanConverter.convertAll(records, new LinkedList<>());
+        final List<PersonBean> nonDuplicates = getNonDuplicatePeople(personBeansRecords);
+        final List<PersonBean> duplicates = getDuplicatePeople(personBeansRecords);
         final StatisticBean statisticBean = new StatisticBean();
-        final List<PersonBean> personBeansDuplicates = logicModelToBeanConverter.convertAll(duplicates, new LinkedList<>());
-        final List<PersonBean> personBeansNonDuplicates = logicModelToBeanConverter.convertAll(nonDuplicates, new LinkedList<>());
 
         statisticBean.setTotalItems(records.size());
         statisticBean.setNumberOfNonDuplicate(nonDuplicates.size());
         statisticBean.setNumberOfDuplicate(duplicates.size());
-        statisticBean.setDuplicate(personBeansDuplicates);
-        statisticBean.setNonDuplicate(personBeansNonDuplicates);
+        statisticBean.setDuplicate(duplicates);
+        statisticBean.setNonDuplicate(nonDuplicates);
 
         return statisticBean;
     }
@@ -89,7 +88,7 @@ public class LogicServiceImpl implements LogicService {
      * @param records List of persons.
      * @return List of duplicate persons.
      */
-    private List<Person> getDuplicatePeople(final List<Person> records) {
+    private List<PersonBean> getDuplicatePeople(final List<PersonBean> records) {
         return records.stream().distinct()
                 .filter(x -> Collections.frequency(records, x) > 1).collect(Collectors.toList());
     }
@@ -100,7 +99,7 @@ public class LogicServiceImpl implements LogicService {
      * @param records List of persons.
      * @return List of non-duplicate persons.
      */
-    private List<Person> getNonDuplicatePeople(final List<Person> records) {
+    private List<PersonBean> getNonDuplicatePeople(final List<PersonBean> records) {
         return records.stream()
                 .filter(x -> Collections.frequency(records, x) == 1).collect(Collectors.toList());
     }
